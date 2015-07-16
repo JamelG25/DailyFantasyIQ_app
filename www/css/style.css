@@ -1,0 +1,25 @@
+/* Empty. Add your own CSS if you like */
+
+.star>.item-content{
+    background-color: #EEE8D6 !important;
+}
+
+.splash {
+    /*makes it go full screen regardless of the browser or the width of the browser*/
+    background: url("../img/field.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.branding{
+    /*width of 50% of the browser window*/
+    width:50%;
+    /*center*/
+    margin: 0 auto;
+    /*so that the logo never gets bigger then 200px*/
+    max-width: 200px;
+    margin-top: 100px;
+    text-align: center;
+}
