@@ -1,0 +1,23 @@
+<ion-view view-title="Chats">
+    <ion-content ng-controller="ChatsCtrl">
+        <div class="list">
+            <!--href="https://twitter.com/{{chat.user}}-->
+            <a class="item item-avatar" ng-repeat="chat in chats">
+                <!--<img ng-src="{{chat.imgURL}}">-->
+                <h2>{{chat.user}}</h2>
+                <p>{{chat.message}}</p>
+            </a>
+        </div>
+
+        <form>
+            <div class="list">
+                <div class="item item-input-inset">
+                    <label class="item-input-wrapper">
+                        <input type="text" placeholder="Message" ng-model="chat.message">
+                    </label>
+                    <button class="button button-assertive ion ion-ios-chatbubble" ng-click="sendChat(chat)"></button>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
