@@ -23,3 +23,30 @@
     margin-top: 100px;
     text-align: center;
 }
+
+#dfs{
+    font-family:sans-serif;
+}
+
+.login{
+    padding-top: 50%;
+    background: url("../img/skyline.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.sign{
+    text-align: center;
+}
+
+#signin{
+    text-align: center;
+}
+
+.tagline{
+    color: white;
+    background-color: #FFC900;
+    font-size: 20px;
+}
