@@ -8,7 +8,7 @@ adapted into an awesome new market which allows you to play Fantasy Sports every
 Da.com is a community entirely focused this new game and its players. 
 In this quick guide we aim to enlighten you on the world of daily fantasy and teach you how to play.
 
-# How We Win?
+# How We Help?
 
 Daily Fantasy Sports is a game of skill, so there are definite strategies involved 
 that separate the winners from the losers. Every game consists of many variables.
