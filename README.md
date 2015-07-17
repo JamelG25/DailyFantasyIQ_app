@@ -21,3 +21,5 @@ Here are some of the key strategies that the best players focus on:
 * Research…the Weather? 
 
 * Prize Pool Value:
+
+![text](www/img/comingsoon.png)

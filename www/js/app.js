@@ -162,8 +162,8 @@ angular.module('starter', ['ionic', 'firebase', 'ngCordova', 'ngTwitter'])
 .controller('tweetAuthCtrl', function($scope, $ionicPlatform, $twitterApi, $cordovaOauth) {
 
     var twitterKey = 'STORAGE.TWITTER.KEY';
-    var clientId = 'aoyRpk0Lb9lVraPVqoOmP7KVf';
-    var clientSecret = 'mebNJoNQyPlEhzqelBz1RTLFQxaTF41z9kZqVeFD2j1lKtZpWg';
+    var clientId = 'k80R819Va4ZjJwpCs61H1NEHA';
+    var clientSecret = 'eyT5BTA3gjCaAQEQRVoRi2QScHuoMoqibI95YMNtYQwoNlWg2Q';
     var myToken = '';
 
     $scope.tweet = {};
