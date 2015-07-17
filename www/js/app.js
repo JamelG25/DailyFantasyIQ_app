@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic', 'firebase'])
+angular.module('starter', ['ionic', 'firebase', 'ngCordova', 'ngTwitter'])
 
     .run(function($ionicPlatform) {
       $ionicPlatform.ready(function() {
@@ -83,6 +83,16 @@ angular.module('starter', ['ionic', 'firebase'])
                 controller: 'CalendarController'
               }
             }
+          })
+
+          .state('tabs.login', {
+              url: '/login',
+              views: {
+                  'login-tab':{
+                      templateUrl: 'templates/login.html',
+                      controller: 'AccountCtrl'
+                  }
+              }
           })
 
           .state('tabs.about', {
@@ -197,25 +207,37 @@ angular.module('starter', ['ionic', 'firebase'])
 })
 
 .controller('ChatsCtrl', ['$scope', '$firebaseArray', '$rootScope',
-  function($scope, $firebaseArray, $rootScope) {
-    //grabbing firebase
-    var ref = new Firebase('https://dfs-chat.firebaseio.com/');
-    //grab firebase in a variable
-    //turn the object into a Array of items
-    $scope.chats = $firebaseArray(ref.child('chats'));
+    function($scope, $firebaseArray, $rootScope) {
+        //grabbing firebase
+        var ref = new Firebase('https://dfs-chat.firebaseio.com/');
+        //grab firebase in a variable
+        //turn the object into a Array of items
+        $scope.chats = $firebaseArray(ref.child('chats'));
 
-    $scope.sendChat = function(chat){
-      //if($rootScope.authData) {
-      $scope.chats.$add({
-        //assigns users as guess
-        user: 'Guest',
-        //$rootScope.authData.twitter.username,
-
-        //gets all the things from the chat
-        message: chat.message
-        //imgURL: $rootScope.authData.twitter.cachedUserProfile.profile_image_url
-      });
-      chat.message = "";
-      //}
+        $scope.sendChat = function(chat){
+            if($rootScope.authData) {
+                $scope.chats.$add({
+                //assigns users as guess
+                user: $rootScope.authData.twitter.username,
+                //gets all the things from the chat
+                message: chat.message,
+                imgURL: $rootScope.authData.twitter.cachedUserProfile.profile_image_url
+            });
+            chat.message = "";
+        }
     }
-  }]);
+}])
+
+.controller('AccountCtrl', function($scope, $rootScope){
+    $scope.login = function () {
+        var ref = new Firebase('https://dfs-chat.firebaseio.com/');
+        ref.authWithOAuthPopup('twitter',function(error,authData){
+            if(error) {
+                alert('There was an error.')
+            }else {
+                alert('Your all set!')
+            }
+            $rootScope.authData = authData;
+        });
+    }
+});

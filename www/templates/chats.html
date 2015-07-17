@@ -2,8 +2,8 @@
     <ion-content ng-controller="ChatsCtrl">
         <div class="list">
             <!--href="https://twitter.com/{{chat.user}}-->
-            <a class="item item-avatar" ng-repeat="chat in chats">
-                <!--<img ng-src="{{chat.imgURL}}">-->
+            <a class="item item-avatar" ng-repeat="chat in chats" href="https://twitter.com/{{chat.user}}" >
+                <img ng-src="{{chat.imgURL}}">
                 <h2>{{chat.user}}</h2>
                 <p>{{chat.message}}</p>
             </a>

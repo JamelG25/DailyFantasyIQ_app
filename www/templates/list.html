@@ -1,16 +1,16 @@
 
-<ion-nav-buttons side="primary">
-        <button class="button button-icon button-calm icon ion-minus-circled" ng-click="data.showDelete = !data.showDelete; data.showReorder = false;"></button>
-    </ion-nav-buttons>
-
-    <ion-nav-buttons side="secondary">
-        <button class="button button-icon ion-navicon" ng-click="data.showDelete = false; data.showReorder = !data.showReorder"></button>
-</ion-nav-buttons>
+<ion-header-bar class="bar-positive">
+    <button class="button button-icon ion-minus-circled" ng-click="data.showDelete = !data.showDelete; data.showReorder = false;">
+    </button>
+    <h2 class="title">Daily Fantasy IQ</h2>
+    <button class="button button-icon ion-navicon" ng-click="data.showReorder = !data.showReorder; data.showDelete = false;">
+    </button>
+</ion-header-bar>
 
 <div class="bar bar-subheader item-input-inset bar-light">
     <label class="item-input-wrapper">
         <i class="icon ion-search placeholder-icon"></i>
-        <input type="search" placeholder="Search" ng-model="query">
+        <input type="search" ng-model="query" placeholder="Search"/>
     </label>
 </div>
 
