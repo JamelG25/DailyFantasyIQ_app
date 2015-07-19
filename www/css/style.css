@@ -28,6 +28,7 @@
     font-family:sans-serif;
 }
 
+/* login page-controls the ion content*/
 .login{
     padding-top: 50%;
     background: url("../img/skyline.jpg") no-repeat center center fixed;
@@ -37,6 +38,7 @@
     background-size: cover;
 }
 
+/*controls the header 2 tag and also the p tag*/
 .sign{
     text-align: center;
 }
