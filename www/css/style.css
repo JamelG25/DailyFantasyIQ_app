@@ -4,14 +4,14 @@
     background-color: #EEE8D6 !important;
 }
 
-.splash {
-    /*makes it go full screen regardless of the browser or the width of the browser*/
-    background: url("../img/field.jpeg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+/*.splash {*/
+    /*/!*makes it go full screen regardless of the browser or the width of the browser*!/*/
+    /*/!*background: url("../img/field.jpeg") no-repeat center center fixed;*!/*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+/*}*/
 
 .branding{
     /*width of 50% of the browser window*/
@@ -51,4 +51,33 @@
     color: white;
     background-color: #FFC900;
     font-size: 20px;
+}
+
+#bgvid{
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    min-width: 100%;
+
+    min-height: 100%;
+
+    width: auto;
+
+    height: auto;
+
+    z-index: -100;
+
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+
+    transform: translateX(-50%) translateY(-50%);
+
+    background: url(http://video.webmfiles.org/big-buck-bunny_trailer.webm) no-repeat;
+
+    background-size: cover;;
 }
